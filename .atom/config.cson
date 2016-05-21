@@ -1,0 +1,70 @@
+"*":
+  core:
+    disabledPackages: [
+      "autocomplete-netsuite"
+      "terminal-plus"
+      "flow-ide"
+      "file-icons"
+    ]
+    ignoredNames: [
+      ".svn"
+      "node_modules"
+      ".project"
+      "project.xml"
+      ".settings"
+      "*.sublime-project"
+      "*.sublime-workspace"
+      "._*"
+      ".DS_Store"
+      ".sublime-gulp.cache"
+      ".git"
+      "*.log"
+    ]
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/matt/Documents/Development"
+    themes: [
+      "nucleus-dark-ui"
+      "atom-gooey-syntax"
+    ]
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "PragmataPro for Powerline"
+    fontSize: 15
+    invisibles: {}
+    showIndentGuide: true
+    softTabs: false
+    tabLength: 4
+  "exception-reporting":
+    userId: "be0ffd0f-0abb-03f9-cdf2-ab13ecd25d4c"
+  "find-and-replace": {}
+  "flow-ide": {}
+  "highlight-column":
+    opacity: 0.04
+  "highlight-selected": {}
+  jshint:
+    onlyConfig: true
+    supportLintingJsx: true
+  linter:
+    errorPanelHeight: 222
+  "linter-eslint": {}
+  minimap: {}
+  "seti-icons":
+    iconsPlus: true
+    noColor: true
+  "terminal-plus":
+    core: {}
+    style:
+      fontFamily: "Hack"
+      fontSize: "13"
+  "tree-view":
+    focusOnReveal: false
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".babel.regexp.source":
+  editor:
+    tabLength: 4
+".js.jsx.source":
+  editor:
+    tabLength: 4

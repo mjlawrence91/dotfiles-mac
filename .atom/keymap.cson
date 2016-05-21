@@ -1,0 +1,10 @@
+'body':
+  'ctrl-shift-up': 'editor:move-line-up'
+  'ctrl-shift-down': 'editor:move-line-down'
+
+'.platform-linux atom-text-editor':
+  'alt-shift-L': 'grammar-selector:show'
+  'ctrl-shift-L': 'editor:split-selections-into-lines'
+
+'atom-text-editor[data-grammar="source js jsx"]:not([mini])':
+    'tab': 'emmet:expand-abbreviation-with-tab'

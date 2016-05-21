@@ -1,0 +1,242 @@
+'.source.js':
+
+  'zzz comment':
+    'prefix': 'zzz'
+    'body': """
+    //[zzz] MJL
+    """
+
+  'todo comment':
+    'prefix': 'todo'
+    'body': """
+    //[TODO] MJL
+    """
+
+  'Try-catch':
+    'prefix': 'try'
+    'body': """
+    try
+    {
+
+    }
+    catch (error)
+    {
+
+    }
+    """
+
+  'Std for loop':
+    'prefix': 'forarr'
+    'body': """
+    for (var i = 0; i < ${1:array}.length; i++)
+    {
+	    $0${1:array}[i];
+    }
+    """
+
+  'Std switch':
+    'prefix': 'switch'
+    'body': """
+    switch (${1:this})
+    {
+    	case $2:
+    		$3
+    		break;
+
+    	case $4:
+    		$5
+    		break;
+
+    	case $6:
+    		$7
+    		break;
+
+    	default:
+    		$8
+    		break;
+    }
+    """
+
+  'FHL try-catch':
+    'prefix': 'fhltrys'
+    'body': """
+    try
+    {
+    	$0
+    }
+    catch (e)
+    {
+    	$2errorHandler('$1', e);
+    }
+    """
+
+  'FHL function stub':
+    'prefix': 'fhlfunc'
+    'body': """
+    /**
+     * $3
+     *
+     * @param {Object} $2
+     */
+    function ${1:functionName}($2)
+    {
+    	try
+    	{
+    		$0
+    	}
+    	catch (e)
+    	{
+    		$4errorHandler('${1:functionName}', e);
+    	}
+    }
+    """
+
+  'FHL boolean function stub':
+    'prefix': 'fhlboolfunc'
+    'body': """
+    /**
+     * $4
+     *
+     * @param  {Object}  $2
+     * @return {Boolean} ${3:retVal}
+     */
+    function ${1:functionName}($2)
+    {
+        var ${3:retVal} = false;
+
+    	try
+    	{
+    		$0
+    	}
+    	catch (e)
+    	{
+    		$4errorHandler('${1:functionName}', e);
+    	}
+        return ${3:retVal};
+    }
+    """
+
+  'FHL initialise function stub':
+    'prefix': 'fhlinit'
+    'body': """
+    /**
+     * Initialise values
+     *
+     * @param  {Object}  $1
+     * @return {Boolean} ${2:initialised}
+     */
+    function initialise($1)
+    {
+    	var ${2:initialised} = false;
+
+    	try
+    	{
+    		$0
+    		${2:initialised} = true;
+    	}
+    	catch (e)
+    	{
+    		errorHandler('initialise', e);
+    	}
+    	return ${2:initialised};
+    }
+    """
+
+  'SS2 Define block':
+    'prefix': 'fhlss2define'
+    'body': """
+    /**
+     * @NApiVersion 2.x
+     * @NScriptType ${1:scriptType}
+     * @NModuleScope ${2:Public}
+     */
+    define([
+        'N/${3:module}'$4
+    ,   './Library'
+    ],
+    function (${3:module}$5, Library)
+    {
+        $0
+
+        return {
+
+        };
+    });
+    """
+
+  'SS2 Require block':
+    'prefix': 'fhlss2require'
+    'body': """
+    /**
+     * @NApiVersion 2.x
+     * @NScriptType ${1:scriptType}
+     * @NModuleScope ${2:Public}
+     */
+    define([
+        'N/${3:module}'$4
+    ,   './Library'
+    ],
+    function (${3:module}$5, Library)
+    {
+        $0
+    });
+    """
+
+  'FHL header block':
+    'prefix': 'fhlheader'
+    'body': """
+    /****************************************************************************************
+     * Name:		 ${1:Script Name} (${2:scriptFile}.js)
+     *
+     * Script Type:	 ${3:scriptType}
+     *
+     * Version:		 1.0.0 - ${4:dd} ${5:mmm} ${6:yyyy} - first release - MJL
+     *
+     * Author:		 FHL
+     *
+     * Purpose:		 ${7:Short description of script function}
+     *
+     * Script: 		 ${10:customscript_${2:scriptFile}}
+     * Deploy: 		 ${10:customdeploy_${2:scriptFile}}
+     *
+     * Notes:
+     *
+     * Dependencies: ${9:Library}.js
+     ****************************************************************************************/
+    """
+
+  'Debug logex':
+    'prefix': 'logexd'
+    'body': """
+    nlapiLogExecution('DEBUG', '${1:functionName}: ${2:title}', ${3:details})
+    """
+
+  'SS2 logex':
+    'prefix': 'logexss2'
+    'body': """
+    log.${1:debug}('${2:functionName}: ${3:title}', ${4:details})
+    """
+
+  'Audit logex':
+    'prefix': 'logexa'
+    'body': """
+    nlapiLogExecution('AUDIT', '${1:functionName}: ${2:title}', ${3:details});
+    """
+
+  'Error logex':
+    'prefix': 'logexe'
+    'body': """
+    nlapiLogExecution('ERROR', '${1:functionName}: ${2:title}', ${3:details});
+    """
+
+  'Gov check logex':
+    'prefix': 'govlog'
+    'body': """
+    nlapiLogExecution('DEBUG', '${1:functionName}: governance remaining', nlapiGetContext().getRemainingUsage())
+    """
+
+  'View record logex':
+    'prefix': 'logviewrec'
+    'body': """
+    nlapiLogExecution('AUDIT', '${1:functionName}: new ${2:recordType} created', nlapiResolveURL('RECORD', '${3:recTypeID}', ${4:recordID}));
+    """
