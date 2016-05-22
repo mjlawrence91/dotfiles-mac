@@ -1,5 +1,5 @@
-# Set path to Z script.
-set -g Z_SCRIPT_PATH /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
+# set 256 colours in shell.
+set -Ux TERM xterm-256color
 
 # Path to Oh My Fish install.
 set -gx OMF_PATH /Users/matt/.local/share/omf
@@ -13,10 +13,6 @@ source $OMF_PATH/init.fish
 # WORKAROUND: Tried to print invalid wide character string
 set --global --export LANG en_GB.UTF-8
 set --global --export LC_ALL en_GB.UTF-8
-
-# Load z into shell
-source /Users/matt/.config/z-fish/z.fish
-source /Users/matt/.config/z-fish/z_complete.fish
 
 # My defined aliases
 source /Users/matt/.config/fish/aliases.fish
