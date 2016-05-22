@@ -43,7 +43,15 @@ alias dev  "cd ~/Documents/Development"
 alias dls  "cd ~/Downloads"
 
 # Aliases to edit config files
-alias known_hosts "nano .ssh/known_hosts"
+set DOTFILES 		"~/Documents/Development/.files"
+alias v				"nvim"
+alias vinit			"cd $DOTFILES; and v .config/nvim/init.vim"
+alias vbundle		"cd $DOTFILES; and v .config/nvim/bundle.vim"
+alias zshrc			"v $DOTFILES/.zshrc; and source ~/.zshrc"
+alias zaliases		"v $DOTFILES/.aliases; and source ~/.zshrc"
+alias fishconfig	"v $DOTFILES/.config/fish/config.fish; and source ~/.config/fish/config.fish"
+alias fishaliases	"v $DOTFILES/.config/fish/aliases.fish; and source ~/.config/fish/aliases.fish"
+alias known_hosts	"v ~/.ssh/known_hosts"
 
 # Aliases to edit system config files (root access)
-alias hosts "sudo nano /private/etc/hosts"
+alias hosts "sudo v /private/etc/hosts"
