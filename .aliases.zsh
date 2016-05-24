@@ -1,4 +1,6 @@
 # Map ls command to something more useful
+#alias ls="ls -Ghl"
+#alias lsa="ls -AGhl"
 alias ls="gls -hl --color=auto --group-directories-first"
 alias lsa="gls -hlA --color=auto --group-directories-first"
 
@@ -35,6 +37,7 @@ alias ex_ssh_arch_tx_kg="ssh matt@matt.pc -L 9999:localhost:6692"
 # Aliases to common directories
 alias drop="cd ~/Dropbox"
 alias dev="cd ~/Documents/Development"
+alias dev.="cd ~/Documents/Development/.files"
 alias dls="cd ~/Downloads"
 
 # Aliases to edit config files
@@ -42,8 +45,8 @@ DOTFILES="~/Documents/Development/.files"
 alias v="nvim"
 alias vinit="cd $DOTFILES && v .config/nvim/init.vim"
 alias vbundle="cd $DOTFILES && v .config/nvim/bundle.vim"
-alias zshrc="v $DOTFILES/.zshrc && source $DOTFILES/.zshrc"
-alias zaliases="v $DOTFILES/.aliases && source $DOTFILES/.zshrc"
+alias zshrc="v $DOTFILES/.zshrc"
+alias zalias="v $DOTFILES/.aliases.zsh"
 alias fishconfig="v $DOTFILES/.config/fish/config.fish"
 alias known_hosts="v .ssh/known_hosts"
 

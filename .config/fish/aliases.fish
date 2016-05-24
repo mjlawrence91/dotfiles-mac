@@ -40,6 +40,7 @@ alias ex_ssh_arch_tx_kg	"ssh matt@matt.pc -L 9999:localhost:6692"
 # Aliases to common directories
 alias drop "cd ~/Dropbox"
 alias dev  "cd ~/Documents/Development"
+alias dev. "cd ~/Documents/Development/.files"
 alias dls  "cd ~/Downloads"
 
 # Aliases to edit config files
